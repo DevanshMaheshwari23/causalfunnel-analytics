@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5000/api";
+const API = "http://localhost:5002/api";
 
 export default function HeatmapView() {
   const [pages, setPages] = useState([]);
