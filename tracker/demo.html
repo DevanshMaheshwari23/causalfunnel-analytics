@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CausalFunnel Demo Page</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; color: #333; }
+      header { background: #1a73e8; color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
+      header h1 { font-size: 1.4rem; }
+      nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+      .hero { background: linear-gradient(135deg, #1a73e8, #0d47a1); color: white; padding: 80px 40px; text-align: center; }
+      .hero h2 { font-size: 2.5rem; margin-bottom: 16px; }
+      .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto 28px; }
+      .btn { background: white; color: #1a73e8; padding: 12px 28px; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; margin: 6px; }
+      .btn-outline { background: transparent; border: 2px solid white; color: white; }
+      .features { display: flex; gap: 24px; padding: 60px 40px; flex-wrap: wrap; justify-content: center; }
+      .card { background: white; border-radius: 12px; padding: 28px; width: 280px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); cursor: pointer; transition: transform 0.2s; }
+      .card:hover { transform: translateY(-4px); }
+      .card h3 { margin-bottom: 10px; color: #1a73e8; }
+      .products { padding: 40px; background: white; }
+      .products h2 { text-align: center; margin-bottom: 32px; font-size: 1.8rem; }
+      .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+      .product-item { border: 1px solid #e0e0e0; border-radius: 10px; padding: 20px; text-align: center; cursor: pointer; transition: box-shadow 0.2s; }
+      .product-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+      .price { color: #1a73e8; font-weight: 700; font-size: 1.1rem; }
+      .add-btn { background: #1a73e8; color: white; border: none; border-radius: 6px; padding: 8px 16px; margin-top: 10px; cursor: pointer; width: 100%; }
+      footer { background: #333; color: #aaa; text-align: center; padding: 20px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🛒 ShopDemo</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <h2>Discover Amazing Products</h2>
+      <p>Shop the best deals curated just for you. Fast delivery, easy returns.</p>
+      <button class="btn">Shop Now</button>
+      <button class="btn btn-outline">Learn More</button>
+    </section>
+    <section class="features">
+      <div class="card"><h3>🚚 Fast Delivery</h3><p>Get your products delivered within 2 business days to your doorstep.</p></div>
+      <div class="card"><h3>🔒 Secure Payment</h3><p>All transactions are encrypted and processed through secure gateways.</p></div>
+      <div class="card"><h3>↩️ Easy Returns</h3><p>Not satisfied? Return within 30 days, no questions asked.</p></div>
+    </section>
+    <section class="products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-item">
+          <div style="width:80px;height:80px;background:#e3f2fd;border-radius:8px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:2rem;">📱</div>
+          <h4>Smartphone X</h4><div class="price">₹24,999</div>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+        <div class="product-item">
+          <div style="width:80px;height:80px;background:#e8f5e9;border-radius:8px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:2rem;">💻</div>
+          <h4>Laptop Pro</h4><div class="price">₹65,000</div>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+        <div class="product-item">
+          <div style="width:80px;height:80px;background:#fff3e0;border-radius:8px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:2rem;">🎧</div>
+          <h4>Headphones</h4><div class="price">₹3,499</div>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+        <div class="product-item">
+          <div style="width:80px;height:80px;background:#fce4ec;border-radius:8px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:2rem;">⌚</div>
+          <h4>Smart Watch</h4><div class="price">₹8,999</div>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    <footer><p>© 2026 ShopDemo — Powered by CausalFunnel Analytics</p></footer>
+    <script src="./tracker.js"></script>
+  </body>
+</html>
