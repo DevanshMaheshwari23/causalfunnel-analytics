@@ -42,9 +42,9 @@
 
     if (navigator.sendBeacon) {
       const blob = new Blob([body], { type: "application/json" });
-      navigator.sendBeacon(BACKEND_URL + "/collect", blob);
+      navigator.sendBeacon(API_URL + "/collect", blob);
     } else {
-      fetch(BACKEND_URL + "/collect", {
+      fetch(API_URL + "/collect", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body,
