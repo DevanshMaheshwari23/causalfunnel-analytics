@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = import.meta.env.VITE_API_URL ||
-  "http://localhost:5002/api";
+const API_URL = "https://causalfunnel-analytics-jcug.onrender.com/api";
 
 const tableHeaderStyle = { textAlign: "left", padding: "12px 16px", color: "#64748b", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.05em", borderBottom: "1px solid #334155" };
 const tdStyle = { padding: "12px 16px", color: "#cbd5e1", fontSize: "0.88rem", borderBottom: "1px solid #1e293b" };

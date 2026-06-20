@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import axios from "axios";
 
-const API = import.meta.env.VITE_API_URL ||
-  "http://localhost:5002/api";
+const API_URL = "https://causalfunnel-analytics-jcug.onrender.com/api";
 
 export default function HeatmapView() {
   const [pages, setPages] = useState([]);
