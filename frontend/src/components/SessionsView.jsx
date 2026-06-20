@@ -22,13 +22,13 @@ export default function SessionsView() {
   const [evLoading, setEvLoading] = useState(false);
 
   useEffect(() => {
-    axios.get(`${API}/sessions`).then((r) => { setSessions(r.data.data); setLoading(false); }).catch(() => setLoading(false));
+    axios.get(`${API_URL}/sessions`).then((r) => { setSessions(r.data.data); setLoading(false); }).catch(() => setLoading(false));
   }, []);
 
   const openSession = (sid) => {
     setSelected(sid);
     setEvLoading(true);
-    axios.get(`${API}/sessions/${sid}/events`).then((r) => { setEvents(r.data.data); setEvLoading(false); }).catch(() => setEvLoading(false));
+    axios.get(`${API_URL}/sessions/${sid}/events`).then((r) => { setEvents(r.data.data); setEvLoading(false); }).catch(() => setEvLoading(false));
   };
 
   return (

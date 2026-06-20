@@ -13,7 +13,7 @@ export default function Dashboard() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get(`${API}/stats`)
+   axios.get(`${API_URL}/stats`)
       .then((r) => { setStats(r.data.data); setLoading(false); })
       .catch(() => { setError("Failed to load stats"); setLoading(false); });
   }, []);

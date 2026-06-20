@@ -11,7 +11,7 @@ export default function HeatmapView() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    axios.get(`${API}/heatmap?page_url=_`).catch(() => {}).then((r) => {
+    axios.get(`${API_URL}/heatmap?page_url=_`).catch(() => {}).then((r) => {
       if (r && r.data && r.data.all_pages) {
         setPages(r.data.all_pages);
         if (r.data.all_pages.length > 0) setSelectedPage(r.data.all_pages[0]);
@@ -22,7 +22,7 @@ export default function HeatmapView() {
   useEffect(() => {
     if (!selectedPage || selectedPage === "_") return;
     setLoading(true);
-    axios.get(`${API}/heatmap?page_url=${encodeURIComponent(selectedPage)}`)
+    axios.get(`${API_URL}/heatmap?page_url=${encodeURIComponent(selectedPage)}`)
       .then((r) => { setClicks(r.data.data || []); setLoading(false); })
       .catch(() => setLoading(false));
   }, [selectedPage]);
