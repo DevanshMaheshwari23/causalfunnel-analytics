@@ -1,7 +1,10 @@
 (function () {
   "use strict";
 
-  const BACKEND_URL = "http://localhost:5002/api";
+  const BACKEND_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:5002/api"
+    : "https://causalfunnel-analytics-backend.onrender.com/api";
   const SESSION_KEY = "cf_session_id";
   const BATCH_INTERVAL = 3000;
   let eventQueue = [];

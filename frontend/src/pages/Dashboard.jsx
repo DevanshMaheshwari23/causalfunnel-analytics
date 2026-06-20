@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5002/api";
+const API = import.meta.env.VITE_API_URL ||
+  "http://localhost:5002/api";
 
 const cardStyle = { background: "#1e293b", border: "1px solid #334155", borderRadius: "12px", padding: "24px", flex: 1, minWidth: "180px" };
 const statNum = { fontSize: "2.2rem", fontWeight: 700, color: "#38bdf8", marginBottom: "4px" };
