@@ -5,8 +5,5 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173
-  },
-  define: {
-    'import.meta.env': import.meta.env
   }
 })
